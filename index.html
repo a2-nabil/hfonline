@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
       rel="stylesheet"
     />
     <!--All Css links here  -->
@@ -28,12 +28,93 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- owl carousel css links  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <!-- custom css  -->
     <link rel="stylesheet" href="./styles.css" />
   </head>
 
   <body>
-   
+    <!-- #Testimonial Section start  -->
+    <div class="a2n-testimonial_area">
+      <div class="a2n-testimonial__grid">
+        <div class="testimonial-left__content">
+          <h3>TESTIMONIAL</h3>
+          <h2>What They Say?</h2>
+          <p>
+            We provide professional, reliable audio visual training courses
+            which are accredited by CPD and IIRSM. Also endorsed by The
+            Institute of Hospitality and approved
+          </p>
+          <p>
+            Along with our courses, we also provide valuable resources to help
+            you take your skills to the next level.
+          </p>
+        </div>
+        <div class="testimonial-right__content">
+          <div class="testimonial_image">
+            <img src="./Rectangle 6410 (2).png" alt="" />
+          </div>
+          <div class="a2n_testimonial-slider owl-carousel owl-theme">
+            <div class="item">
+              <!-- #1testimonial card start  -->
+              <div class="a2n-testimonial_card">
+                <div class="a2n_test-content">
+                  <p>
+                    We provide professional, reliable audio visual training
+                    courses which are accredited by CPD and IIRSM. Also endorsed
+                    by The Institute of Hospitality and approved by Gatehouse
+                    Awards,
+                  </p>
+                  <p>
+                    We provide professional, reliable audio visual training
+                    courses which are accredited by CPD and IIRSM. Also endorsed
+                    by The Institute of Hospitality and approved by Gatehouse
+                    Awards,
+                  </p>
+                </div>
+                <div class="a2n_test-ratings">
+                  <h4>Ella Jones</h4>
+                  <div class="a2n_ratings">
+                    <img src="./Group 378.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <!-- #1testimonial card end  -->
+            </div>
+            <div class="item">
+              <!-- #2testimonial card start  -->
+              <div class="a2n-testimonial_card">
+                <div class="a2n_test-content">
+                  <p>
+                    We provide professional, reliable audio visual training
+                    courses which are accredited by CPD and IIRSM. Also endorsed
+                    by The Institute of Hospitality and approved by Gatehouse
+                    Awards,
+                  </p>
+                  <p>
+                    We provide professional, reliable audio visual training
+                    courses which are accredited by CPD and IIRSM. Also endorsed
+                    by The Institute of Hospitality and approved by Gatehouse
+                    Awards,
+                  </p>
+                </div>
+                <div class="a2n_test-ratings">
+                  <h4>Ella Jones</h4>
+                  <div class="a2n_ratings">
+                    <img src="./Group 378.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <!-- #2testimonial card end  -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- #Testimonial Section end  -->
 
     <!-- al js links here  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -43,5 +124,19 @@
       integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      $(function () {
+        // Owl Carousel
+        var testOwl = $(".a2n_testimonial-slider");
+        testOwl.owlCarousel({
+          items: 1,
+          margin: 10,
+          loop: true,
+          nav: true,
+          dots: false,
+        });
+      });
+    </script>
   </body>
 </html>
