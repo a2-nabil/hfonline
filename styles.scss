@@ -128,9 +128,18 @@
 }
 @media (max-width: 767px) {
   .a2n-testimonial_area {
-    margin: -40px 0 0 15px;
+    
     .a2n-testimonial__grid {
       grid-template-columns: 100%;
+    }
+    .a2n_testimonial-slider {
+      margin: -40px 0 0 15px;
+      max-width: 360px;
+    }
+    .a2n-testimonial_card {
+      padding: 23px;
+      width: 100%;
+      max-width: 360px;
     }
   }
 }

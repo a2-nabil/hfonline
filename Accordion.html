@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accordion</title>
+    <!-- google fonts here  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap 3.7  -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    li {
+      list-style: none;
+    }
+
+    /* accordion part css start  */
+    .a2n-faq_title h2 {
+      margin: 0 0 32px;
+      color: #2b354e;
+      font-family: "Inter", Sans-serif;
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 44.8px;
+    }
+    .a2n-accordion_head {
+      padding: 18px 24px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: 0.3s all;
+      border: 1px solid #e2e8f0;
+      margin-bottom: 16px;
+    }
+
+    .a2n-accordion__title {
+      margin: 0;
+      font-family: "Inter", Sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: #2b354e;
+    }
+
+    .a2n-acc_item {
+      margin: 0;
+      font-family: "Inter", Sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+      color: #2b354e;
+    }
+
+    .a2n-accordion__content-wrap {
+      overflow: hidden;
+      transition: 0.2s all ease-in-out;
+    }
+
+    .a2n-accordion__content {
+      padding: 0 24px 24px;
+    }
+
+    .a2n-accordion__active {
+      position: relative;
+      border: 1px solid #e2e8f0;
+      margin-bottom: 16px;
+    }
+    .a2n-accordion__active .a2n-accordion_head {
+      border: 0;
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    .a2n-accordion__active .a2n-accordion__content-wrap {
+      display: block;
+      height: auto;
+      max-height: 1000px;
+    }
+    .a2n_icon_box {
+      position: relative;
+    }
+    .a2n_icon_box:before,
+    .a2n_icon_box:after {
+      content: "";
+      position: absolute;
+      top: 40%;
+      right: 0;
+      margin: 0 0 -8px;
+      background: #f5a033;
+      border-radius: 2px;
+    }
+    .a2n_icon_box:before {
+      right: 8px;
+      width: 2px;
+      height: 15px;
+      transition: all 300ms;
+      margin-top: -7.5px;
+      background: #f5a033;
+    }
+    .a2n_icon_box:after {
+      right: 1px;
+      width: 16px;
+      height: 3px;
+      margin-top: -1.5px;
+      background: #f5a033;
+    }
+    .a2n-accordion__active .a2n_icon_box:before {
+      height: 0;
+      margin-top: 0;
+    }
+    /* accordion part css end  */
+  </style>
+
+  <body>
+    <!-- a2n custom accordion start  -->
+    <div id="a2n_faq" class="a2n_accordion-section">
+      <div class="a2n-faq_title">
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="a2n-accordion__list">
+        <!-- #1 single accordion  -->
+        <div class="a2n-accordion a2n-accordion__active">
+          <div class="a2n-accordion_head">
+            <span class="a2n-accordion__title">
+              Are there any prerequisites for taking the course?
+            </span>
+            <div class="a2n_icon_box">
+              <span class="a2n-arrow"></span>
+            </div>
+          </div>
+          <div class="a2n-accordion__content-wrap">
+            <div class="a2n-accordion__content">
+              <p class="a2n-acc_item">
+                There are no specific prerequisites for this course, nor are
+                there any formal entry requirements. All you need is an internet
+                connection, a good understanding of English and a passion for
+                learning for this course.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- #2 single accordion  -->
+        <div class="a2n-accordion">
+          <div class="a2n-accordion_head">
+            <span class="a2n-accordion__title">
+              Can I access the course at any time, or is there a set schedule?
+            </span>
+            <div class="a2n_icon_box">
+              <span class="a2n-arrow"></span>
+            </div>
+          </div>
+          <div class="a2n-accordion__content-wrap">
+            <div class="a2n-accordion__content">
+              <p class="a2n-acc_item">
+                You have the flexibility to access the course at any time that
+                suits your schedule. Our courses are self-paced, allowing you to
+                study at your own pace and convenience.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- #3 single accordion  -->
+        <div class="a2n-accordion">
+          <div class="a2n-accordion_head">
+            <span class="a2n-accordion__title">
+              How long will I have access to the course?
+            </span>
+            <div class="a2n_icon_box">
+              <span class="a2n-arrow"></span>
+            </div>
+          </div>
+          <div class="a2n-accordion__content-wrap">
+            <div class="a2n-accordion__content">
+              <p class="a2n-acc_item">
+                For this course, you will have access to the course materials
+                for 1 year only. This means you can review the content as often
+                as you like within the year, even after you've completed the
+                course. However, if you buy Lifetime Access for the course, you
+                will be able to access the course for a lifetime.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- #4 single accordion  -->
+        <div class="a2n-accordion">
+          <div class="a2n-accordion_head">
+            <span class="a2n-accordion__title">
+              Is there a certificate of completion provided after completing the
+              course?
+            </span>
+            <div class="a2n_icon_box">
+              <span class="a2n-arrow"></span>
+            </div>
+          </div>
+          <div class="a2n-accordion__content-wrap">
+            <div class="a2n-accordion__content">
+              <p class="a2n-acc_item">
+                Yes, upon successfully completing the course, you will receive a
+                certificate of completion. This certificate can be a valuable
+                addition to your professional portfolio and can be shared on
+                your various social networks.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- #5 single accordion  -->
+        <div class="a2n-accordion">
+          <div class="a2n-accordion_head">
+            <span class="a2n-accordion__title">
+              Can I switch courses or get a refund if I'm not satisfied with the
+              course?
+            </span>
+            <div class="a2n_icon_box">
+              <span class="a2n-arrow"></span>
+            </div>
+          </div>
+          <div class="a2n-accordion__content-wrap">
+            <div class="a2n-accordion__content">
+              <p class="a2n-acc_item">
+                We want you to have a positive learning experience. If you're
+                not satisfied with the course, you can request a course transfer
+                or refund within 14 days of the initial purchase.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- #6 single accordion  -->
+        <div class="a2n-accordion">
+          <div class="a2n-accordion_head">
+            <span class="a2n-accordion__title">
+              How do I track my progress in the course?
+            </span>
+            <div class="a2n_icon_box">
+              <span class="a2n-arrow"></span>
+            </div>
+          </div>
+          <div class="a2n-accordion__content-wrap">
+            <div class="a2n-accordion__content">
+              <p class="a2n-acc_item">
+                Our platform provides tracking tools and progress indicators for
+                each course. You can monitor your progress, completed lessons,
+                and assessments through your learner dashboard for the course.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- #7 single accordion  -->
+        <div class="a2n-accordion">
+          <div class="a2n-accordion_head">
+            <span class="a2n-accordion__title">
+              What if I have technical issues or difficulties with the course?
+            </span>
+            <div class="a2n_icon_box">
+              <span class="a2n-arrow"></span>
+            </div>
+          </div>
+          <div class="a2n-accordion__content-wrap">
+            <div class="a2n-accordion__content">
+              <p class="a2n-acc_item">
+                If you encounter technical issues or content-related
+                difficulties with the course, our support team is available to
+                assist you. You can reach out to them for prompt resolution.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- a2n custom accordion end  -->
+
+    <!-- a2n custom accordion js  -->
+    <script>
+      function handleClass(node, className, action = "add") {
+        node.classList[action](className);
+      }
+
+      const accordions = document.querySelectorAll(".a2n-accordion");
+
+      accordions.forEach(function (accordion, index) {
+        const heading = accordion.querySelector(".a2n-accordion_head");
+        const accordionContentWrap = accordion.querySelector(
+          ".a2n-accordion__content-wrap"
+        );
+        const originalHeight = accordionContentWrap.offsetHeight;
+
+        if (index === 0) {
+          handleClass(accordion, "a2n-accordion__active");
+          accordionContentWrap.style.height = originalHeight + "px";
+        } else {
+          accordionContentWrap.style.height = 0;
+        }
+
+        let accordionActiveClass = "a2n-accordion__active";
+
+        heading.addEventListener("click", function () {
+          if (this.parentNode.classList.contains(accordionActiveClass)) {
+            handleClass(this.parentNode, accordionActiveClass, "remove");
+            accordionContentWrap.style.height = 0 + "px";
+          } else {
+            accordions.forEach(function (otherAccordion, otherIndex) {
+              if (
+                otherIndex !== index &&
+                otherAccordion.classList.contains(accordionActiveClass)
+              ) {
+                handleClass(otherAccordion, accordionActiveClass, "remove");
+                otherAccordion.querySelector(
+                  ".a2n-accordion__content-wrap"
+                ).style.height = 0 + "px";
+              }
+            });
+
+            handleClass(this.parentNode, accordionActiveClass);
+            accordionContentWrap.style.height = originalHeight + "px";
+          }
+        });
+      });
+    </script>
+    <!-- al js links here  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
